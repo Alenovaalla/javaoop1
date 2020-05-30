@@ -6,33 +6,21 @@ public class Conditioner {
     private int minTemperature;
     private int currentTemperature;
     private boolean on;
-    private int increaseCurrentTemperature;
-    private int decreaseCurrentTemperature;
 
-    public int getIncreaseCurrentTemperature() {
-        return increaseCurrentTemperature;
-    }
 
-    public void setIncreaseCurrentTemperature(int increaseCurrentTemperature) {
+    public void increaseCurrentTemperature(int increaseCurrentTemperature) {
         if (currentTemperature == maxTemperature) {
             return;
         }
         currentTemperature++;
-        this.increaseCurrentTemperature =increaseCurrentTemperature;
-}
-
-    public int getDecreaseCurrentTemperature() {
-        return decreaseCurrentTemperature;
     }
 
-    public void setDecreaseCurrentTemperature(int decreaseCurrentTemperature) {
+    public void decreaseCurrentTemperature(int decreaseCurrentTemperature) {
         if (currentTemperature == minTemperature) {
             return;
         }
         currentTemperature--;
-        this.decreaseCurrentTemperature = decreaseCurrentTemperature;
     }
-
 
 
     public String getName() {
@@ -48,7 +36,7 @@ public class Conditioner {
     }
 
     public void setMaxTemperature(int maxTemperature) {
-        this.maxTemperature = 25;
+        this.maxTemperature = maxTemperature;
     }
 
     public int getMinTemperature() {
@@ -56,7 +44,7 @@ public class Conditioner {
     }
 
     public void setMinTemperature(int minTemperature) {
-        this.minTemperature = 15;
+        this.minTemperature = minTemperature;
     }
 
     public int getCurrentTemperature() {
